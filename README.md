@@ -10,5 +10,29 @@ Steps
 1. Create Conda environment (masterproject)
 ```
 conda create --name masterproject python=3.9
-
 ```
+2. Activate the specific project environment 
+``` 
+conda activate masterproject
+```
+3. Clone yolov8(Usefull for detection and semantic segmentation)
+```
+# This is command to download yolov8 
+git clone https://github.com/ultralytics/ultralytics.git
+```
+4. Install YOLOV8
+```
+pip install ultralytics
+```
+5. Verify installation
+```
+yolo predict model=yolov8n.pt source='https://ultralytics.com/images/bus.jpg'
+```
+6. Run Script
+```
+cd Arun/Scripts
+python detect.py
+```
+To Do
+1. Try to use sematic segmentation to get a sailanecy map
+2. Come up with the optimization method to minimise overlap on sailency features and minimise distance to the corect object
